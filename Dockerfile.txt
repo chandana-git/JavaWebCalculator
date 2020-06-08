@@ -1,0 +1,5 @@
+FROM openjdk:8
+RUN java -version
+ADD target/WebAppCal-0.0.3.war WebAppCal-0.0.3.war
+EXPOSE 8084
+CMD ["java","-jar","/WebAppCal-0.0.3.war"]
