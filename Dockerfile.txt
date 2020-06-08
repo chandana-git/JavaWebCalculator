@@ -1,3 +1,4 @@
-FROM openjdk:8
+FROM openjdk:12-alpine
 RUN java -version
-CMD ["java","-jar","/WebAppCal-0.0.3.war"]
+COPY target/WebAppCal-0.0.3.war  /WebAppCal.war
+CMD ["java","-jar","/WebAppCal.war"]
